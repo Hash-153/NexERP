@@ -1,0 +1,33 @@
+"""
+NexERP Governance, Risk, Compliance (GRC) & Workflow Enums.
+"""
+
+from enum import Enum
+
+
+class AuditActionType(str, Enum):
+    CREATE = "CREATE"
+    UPDATE = "UPDATE"
+    DELETE = "DELETE"
+    POST_TRANSACTION = "POST_TRANSACTION"
+    REVERSE_TRANSACTION = "REVERSE_TRANSACTION"
+    APPROVE_WORKFLOW = "APPROVE_WORKFLOW"
+    REJECT_WORKFLOW = "REJECT_WORKFLOW"
+    USER_LOGIN = "USER_LOGIN"
+    SECURITY_VIOLATION = "SECURITY_VIOLATION"
+
+
+class WorkflowStatus(str, Enum):
+    DRAFT = "DRAFT"
+    IN_PROGRESS = "IN_PROGRESS"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+    CANCELLED = "CANCELLED"
+    ESCALATED = "ESCALATED"
+
+
+class ApprovalDecision(str, Enum):
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+    DELEGATED = "DELEGATED"
